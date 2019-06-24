@@ -1,0 +1,313 @@
+/* Color way
+-------------
+Teal color - for headings & bgs):           #4aaaa5                   |
+Regular font color - p, all txt cept h tags #777777                   |
+Main header background color:               #ffffff                   |
+Main header border color:                   #cccccc                   |
+Footer background color:                    #666666                   |
+Main content background color:              #ffffff                   |
+Main content border color:                  #dddddd                   |
+                                                                      |
+Complimentary Color Codes - #04bf9d - Tealish                         |
+from adobe                  #b8bfa8 - White Sand                      |
+                            #d9a577 - Butter Leather                  |
+                            #bf7b6b - Washed Out Coral                |
+                            #f2f2f2 - Crisp Linen                     |
+----------------------------------------------------------------------|
+   Fonts                                                              |
+----------------------------------------------------------------------|
+For heading fonts use `font-family: 'Georgia', Times, Times New Roman, serif;
+All other fonts use `'Arial', 'Helvetica Neue', Helvetica, sans-serif;|   
+----------------------------------------------------------------------|  
+sticky footer credit to: http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ 
+css reset credit to:     https://meyerweb.com/eric/tools/css/reset/   |
+----------------------------------------------------------------------|  */
+
+
+/* Utilities */
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -109px;
+}
+
+.push {
+    height: 109px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Global */
+
+body {
+    background: url('/assets/img/bg.jpg') #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 18px;
+    color: #777777;
+}
+
+a {
+    color: #9999A5;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #4aaaa5;
+}
+
+h1 span {
+    color: #d9a577;
+}
+
+h3 {
+    font-size: 22px
+}
+
+ul {
+    margin: 5px 0 0 0;
+    padding: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header li {
+    display: inline;
+    padding: 0 10px;
+}
+
+
+/* Header */
+
+header {
+    background: #ffffff;
+    border-bottom: 4px solid #cccccc;
+}
+
+#masthead {
+    width: 960px;
+    height: 90px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header_name_text_block {
+    background: #4aaaa5;
+    width: 300px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+#header_name_text {
+    margin: auto;
+    color: white;
+}
+
+
+/* Nav */
+
+header .highlight {
+    color: #d4d602;
+}
+
+header .current a {
+    color: #4aaaa5;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #d4d602;
+    font-weight: bold;
+}
+
+
+/* Main and the sidebar */
+
+#main_block {
+    width: 960px;
+    margin: 38px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.asides {
+    margin-left: 20px;
+}
+
+aside #connect_personal {
+    margin-top: 50px;
+}
+
+section,
+aside {
+    background: #ffffff;
+    border: 2px solid #bf7b6b;
+    width: 70%;
+    padding: 0px 30px;
+    margin-left: 20px;
+}
+
+section p {
+    line-height: 190%;
+}
+
+#section_grey_line {
+    background: #dddddd;
+    height: 3px;
+    margin: 30px 0 20px 0;
+}
+
+aside {
+    width: 208px;
+    height: 160px;
+    padding: 30px 30px 46px 30px;
+}
+
+aside img {
+    width: 60px;
+    height: 60px;
+    transition: all 0.2s linear;
+}
+
+aside img:hover {
+    opacity: 0.7;
+}
+
+#aside_grey_line {
+    background: #EEEEEE;
+    height: 2px;
+    margin: 20px 0 22px 0;
+}
+
+#social_images {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Footer */
+
+footer {
+    background: #666666;
+    border-top: 9px solid #4aaaa5;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer_text {
+    font-size: 18px;
+    color: #d4d602;
+}
+
+
+/* just for about me page */
+
+#profile_image {
+    margin: 10px 25px 10px 0px;
+    float: left;
+}
+
+
+/* just for portfolio page */
+
+#portfolio_pic_block {
+    width: 588px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio_pic {
+    height: 205px;
+    margin-bottom: 56px;
+    position: relative;
+}
+
+.portfolio_pic:last-child {
+    margin-bottom: 0px;
+}
+
+.portfolio_pic_text_block {
+    background: #4aaaa5;
+    width: 100%;
+    height: 40px;
+    margin-top: 136px;
+    padding-top: 20px;
+    position: absolute;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.portfolio_pic_text_block:hover {
+    background: #d4d602;
+}
+
+
+/* just for contact page */
+
+form {
+    margin-top: 27px;
+}
+
+input,
+textarea {
+    border: 1px solid #dddddd;
+    width: 564px;
+    margin-top: 7px;
+    padding: 9px;
+    font-size: 14px;
+    color: #a9a9a9;
+}
+
+input[type=submit] {
+    background: #4aaaa5;
+    border: 0px;
+    outline: none;
+    width: auto;
+    margin-top: 15px;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: white;
+    transition: all 0.2s linear;
+}
+
+input[type=submit]:hover {
+    background: #777777;
+}
+
+textarea {
+    height: 198px;
+}
