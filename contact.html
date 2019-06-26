@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Responsive-Portfolio index-->
+<!-- Responsive-Portfolio contact-->
 <html lang="en">
 
 <head>
@@ -17,42 +17,47 @@
 <body>
     <div class="wrapper">
         <header>
-
             <div id="masthead">
-                <div id="header_name_text_block">
-                    <h1 id="header_name_text"><span class="highlight">Manuel</span> Gonzalez</h1>
+                <div class="name_area">
+                    <div id="header_name_text_block">
+                        <h1 id="header_name_text"><span class="highlight">Manuel</span> Gonzalez</h1>
+                    </div>
                 </div>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="index.html">About</a>
-                        </li>
+                <nav class="nav_bar_area">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="index.html">About</a>
+                            </li>
 
-                        <li>
-                            <a href="Portfolio.html">Portfolio</a>
-                        </li>
+                            <li>
+                                <a href="Portfolio.html">Portfolio</a>
+                            </li>
 
-                        <li class="current">
-                            <a href="Contact.html">Contact</a>
+                            <li class="current">
+                                <a href="Contact.html">Contact</a>
 
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </nav>
             </div>
-
         </header>
 
-        <div id="main_block">
+        <div class="cont">
             <section>
-                <form>
+                <h2>Contact me</h2>
+                <div id="section_grey_line"></div>
+
+                <form class="form">
                     <label>Name</label><br/>
-                    <input type="text" name="name" value="Manuel Gonzalez"><br/><br/>
+                    <input type="text" name="name" placeholder="Manuel Gonzalez"><br/><br/>
 
                     <label>Email</label><br/>
-                    <input type="email" name="email" value="daddyto9@gmail.com"><br/><br/>
+                    <input type="email" name="email" placeholder="daddyto9@gmail.com"><br/><br/>
 
                     <label>Message</label><br/>
-                    <textarea name="Tell me all about it..."></textarea><br/>
+                    <textarea name="message" placeholder="Tell me all about it..."></textarea><br/>
 
                     <div id="submit_button"><input type="submit" value="Submit"></div>
                 </form>
@@ -89,7 +94,6 @@
 
                     </div>
                 </aside>
-
             </div>
         </div>
 

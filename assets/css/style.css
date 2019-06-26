@@ -29,6 +29,7 @@ css reset credit to:     https://meyerweb.com/eric/tools/css/reset/   |
 html,
 body {
     height: 100%;
+    position: relative;
 }
 
 .wrapper {
@@ -68,9 +69,7 @@ a {
     text-decoration: none;
 }
 
-h1,
-h2,
-h3 {
+h1 {
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-weight: bold;
     font-size: 30px;
@@ -79,6 +78,14 @@ h3 {
 
 h1 span {
     color: #d9a577;
+}
+
+h2 {
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: #4aaaa5;
+    padding-top: 20px;
 }
 
 h3 {
@@ -109,12 +116,22 @@ header {
 }
 
 #masthead {
-    width: 960px;
+    width: 100%;
     height: 90px;
-    margin: 0px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    border-bottom: #ddd 4px solid;
+}
+
+.name_area {
+    width: 60%;
+    margin-left: 10%;
+    float: left;
+}
+
+.nav_bar_area {
+    margin: 2.5% 5% 0 0;
 }
 
 #header_name_text_block {
@@ -150,14 +167,121 @@ header a:hover {
 
 /* Main and the sidebar */
 
-#main_block {
-    width: 960px;
-    margin: 38px auto;
+
+/* just for about me page */
+
+.about {
+    width: 83%;
+    margin: 0% auto 2.5%;
     display: flex;
     justify-content: space-between;
 }
 
+#profile_image {
+    margin: 10px 25px 10px 0px;
+    float: left;
+}
+
+
+/* just for portfolio page */
+
+.port {
+    width: 83%;
+    margin: 0% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#portfolio_pic_block {
+    width: 588px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio_pic {
+    height: 205px;
+    margin-bottom: 56px;
+    position: relative;
+}
+
+.portfolio_pic:last-child {
+    margin-bottom: 0px;
+}
+
+.portfolio_pic_text_block {
+    background: #4aaaa5;
+    width: 100%;
+    height: 40px;
+    margin-top: 136px;
+    padding-top: 20px;
+    position: absolute;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.portfolio_pic_text_block:hover {
+    background: #d4d602;
+}
+
+
+/* just for contact page */
+
+.cont {
+    width: 83%;
+    margin: 0% auto 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+form {
+    margin-top: 27px;
+}
+
+input,
+textarea {
+    border: 1px solid #dddddd;
+    width: 564px;
+    margin-top: 7px;
+    padding: 9px;
+    font-size: 14px;
+    color: #9999A5;
+}
+
+ ::placeholder {
+    color: #d4d602;
+    opacity: .5;
+}
+
+input[type=submit] {
+    background: #4aaaa5;
+    border: 0px;
+    outline: none;
+    width: auto;
+    margin-top: 15px;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: white;
+    transition: all 0.2s linear;
+}
+
+input[type=submit]:hover {
+    background: #d4d602;
+}
+
+textarea {
+    height: 198px;
+}
+
+
+/* sidebars */
+
 .asides {
+    margin-top: 13%;
     margin-left: 20px;
 }
 
@@ -165,11 +289,19 @@ aside #connect_personal {
     margin-top: 50px;
 }
 
-section,
-aside {
+section {
     background: #ffffff;
     border: 2px solid #bf7b6b;
     width: 70%;
+    padding: 0px 30px;
+    margin-top: 13%;
+    margin-left: 20px;
+}
+
+aside {
+    background: #ffffff;
+    border: 2px solid #bf7b6b;
+    width: 30%;
     padding: 0px 30px;
     margin-left: 20px;
 }
@@ -222,8 +354,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* position: absolute;
-    bottom: 0; */
 }
 
 #footer_text {
@@ -232,85 +362,51 @@ footer {
 }
 
 
-/* just for about me page */
+/* media queries */
 
-#profile_image {
-    margin: 10px 25px 10px 0px;
-    float: left;
+@media(max-width: 768px) {
+    header,
+    header #masthead,
+    .name_area,
+    nav,
+    .nav_bar_area,
+    header nav,
+    header nav li,
+    .cont form,
+    .asides,
+    .connect_b2b,
+    .connect_personal {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    header {
+        padding-bottom: 20px;
+    }
+    .name_area {
+        background: #4aaaa5;
+        width: 100%;
+        margin: 0;
+        text-align: center
+    }
+    .nav_bar_area {
+        background: #fff;
+        margin: 0;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        align-self: auto;
+    }
+    .submit_button {
+        display: block;
+        width: 100%;
+    }
+    .form input[type="email"],
+    .form input,
+    .form textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 }
 
 
-/* just for portfolio page */
-
-#portfolio_pic_block {
-    width: 588px;
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.portfolio_pic {
-    height: 205px;
-    margin-bottom: 56px;
-    position: relative;
-}
-
-.portfolio_pic:last-child {
-    margin-bottom: 0px;
-}
-
-.portfolio_pic_text_block {
-    background: #4aaaa5;
-    width: 100%;
-    height: 40px;
-    margin-top: 136px;
-    padding-top: 20px;
-    position: absolute;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    font-size: 22px;
-    color: white;
-    text-align: center;
-    transition: all 0.2s linear;
-}
-
-.portfolio_pic_text_block:hover {
-    background: #d4d602;
-}
-
-
-/* just for contact page */
-
-form {
-    margin-top: 27px;
-}
-
-input,
-textarea {
-    border: 1px solid #dddddd;
-    width: 564px;
-    margin-top: 7px;
-    padding: 9px;
-    font-size: 14px;
-    color: #d4d602
-}
-
-input[type=submit] {
-    background: #4aaaa5;
-    border: 0px;
-    outline: none;
-    width: auto;
-    margin-top: 15px;
-    padding: 10px 30px;
-    font-size: 18px;
-    color: white;
-    transition: all 0.2s linear;
-}
-
-input[type=submit]:hover {
-    background: #d4d602;
-}
-
-textarea {
-    height: 198px;
-}
+/* target selector then */
