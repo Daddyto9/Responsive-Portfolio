@@ -54,7 +54,7 @@ body {
 /* Global */
 
 body {
-    background-image: url('/assets/img/bg.png');
+    background-image: url('assets/img/bg.png');
     background-size: cover;
     background-repeat: repeat-y;
     margin: 0px;
@@ -285,6 +285,7 @@ textarea {
 .asides {
     margin-top: 13%;
     margin-left: 20px;
+    /* display: flex; */
 }
 
 aside #connect_personal {
@@ -304,7 +305,8 @@ aside {
     background: #ffffff;
     border: 2px solid #bf7b6b;
     width: 30%;
-    padding: 0px 30px;
+    display: flex;
+    /* padding: 0px 30px; */
     margin-left: 20px;
 }
 
