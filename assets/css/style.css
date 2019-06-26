@@ -368,6 +368,14 @@ footer {
 
 /* media queries */
 
+
+/* 
+
+still trying to get "flex" to work
+
+@media(max-width: 980) {
+} */
+
 @media(max-width: 768px) {
     header,
     header #masthead,
@@ -411,3 +419,9 @@ footer {
         margin-bottom: 5px;
     }
 }
+
+
+/* 
+    tablet
+    @media (min-width: 640px) {
+    } */
