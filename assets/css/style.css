@@ -54,7 +54,7 @@ body {
 /* Global */
 
 body {
-    background: url('/assets/img/bg.jpg') #ffffff;
+    background: url('assets/img/bg.jpg') #ffffff;
     background-size: cover;
     background-repeat: repeat-y;
     margin: 0px;
@@ -69,7 +69,8 @@ a {
     text-decoration: none;
 }
 
-h1 {
+h1,
+h3 {
     font-family: 'Georgia', Times, Times New Roman, serif;
     font-weight: bold;
     font-size: 30px;
@@ -165,7 +166,8 @@ header a:hover {
 }
 
 
-/* Main and the sidebar */
+/* Main and the sidebar 
+--------------------------*/
 
 
 /* just for about me page */
@@ -407,6 +409,3 @@ footer {
         margin-bottom: 5px;
     }
 }
-
-
-/* target selector then */
